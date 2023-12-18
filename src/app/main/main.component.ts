@@ -1,4 +1,4 @@
-import { Component,Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { BtnComponent } from '../btn/btn.component';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
@@ -20,6 +20,13 @@ import { HousingLocation } from '../housinglocation';
 export class MainComponent {
   readonly baseUrl = 'https://angular.io/assets/images/tutorials/faa';
   show=false;
+  input="Angular framwork";
+
+  name: string = '';
+
+  setValue() {
+    this.name = 'Nancy';
+  }
   names=["yousif","ahhh","hmmmed"];
   switch_express="asd";
   housingLocationList: HousingLocation[] = [
