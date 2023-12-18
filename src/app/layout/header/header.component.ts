@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { BtnComponent } from '../../btn/btn.component';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [],
+  imports: [
+    BtnComponent
+  ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })

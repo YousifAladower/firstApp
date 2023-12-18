@@ -1,1 +1,28 @@
-<p>main works!</p>
+<!-- <p *ngIf="show" >main works!</p>
+<ul *ngFor="let name of names" >
+  <li >{{ name }}</li>
+
+</ul> -->
+
+<!-- <ul [ngSwitch]="switch_express">
+
+  <li *ngSwitchCase="'yousif'">YOUSIF</li>
+  <li *ngSwitchCase="'ahhh'">ahhh</li>
+  <li *ngSwitchCase="'hmmmed'">hmmmed</li>
+  <li *ngSwitchDefault>No Items</li>
+
+</ul> -->
+
+
+<section>
+  <form>
+    <input type="text" placeholder="Filter by city">
+    <button class="primary" type="button">Search</button>
+  </form>
+</section>
+<section class="results">
+  <app-housing-location
+    *ngFor="let housingLocation of housingLocationList"
+    [housingLocation]="housingLocation">
+  </app-housing-location>
+</section>

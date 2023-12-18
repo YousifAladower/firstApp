@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { BtnComponent } from '../../btn/btn.component';
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    BtnComponent
+  ],
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
