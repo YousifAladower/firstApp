@@ -3,7 +3,8 @@ import { BtnComponent } from '../btn/btn.component';
 import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 
 @Component({
@@ -13,7 +14,9 @@ import { FormsModule } from '@angular/forms';
     BtnComponent,
     CommonModule,
     HousingLocationComponent,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
+
 
   ],
   templateUrl: './main.component.html',
@@ -24,12 +27,16 @@ export class MainComponent implements OnInit{
   // show=true;
   // input="Angular framwork";
   // select="";
+  firstName=new FormControl('');
 constructor(){
-  
+  this.firstName.setValue("yousif");
 }
   name: any;
   ngOnInit(): void {
 
+  }
+  setDATA(){
+    this.firstName.setValue(this.firstName.value);
   }
 
   // setValue() {

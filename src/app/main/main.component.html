@@ -57,10 +57,13 @@
   Wellcome 16 angular
 </div> -->
 
-<form #myForm="ngForm" (ngSubmit)="getData()">
+<!-- <form #myForm="ngForm" (ngSubmit)="getData()">
   <input type="text" name="name"   [(ngModel)]="name">
   <button type="submit" >sendvalue</button>
-</form>
+</form> -->
 
 
+<label for="firstName" >FirstName</label>
+<input type="text" id="firstName" [formControl]="firstName"  onchange="setDATA()">
+<p>{{ firstName.value }}</p>
 

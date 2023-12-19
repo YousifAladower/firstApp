@@ -3,6 +3,7 @@ import { appConfig } from './app/app.config';
 import { IndexComponent } from './app/layout/index/index.component';
 
 
+
 bootstrapApplication(IndexComponent, appConfig)
   .catch((err) => console.error(err));
 

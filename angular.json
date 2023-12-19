@@ -35,6 +35,12 @@
             }
           },
           "configurations": {
+            "development": {
+              "optimization": true,
+              "extractLicenses": true,
+              "sourceMap": true,
+              "namedChunks": true
+            },
             "production": {
               "budgets": [
                 {
@@ -49,12 +55,9 @@
                 }
               ],
               "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
             }
+
+
           },
           "defaultConfiguration": "production"
         },
