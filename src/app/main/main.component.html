@@ -30,9 +30,37 @@
 
 
 
-<input [(ngModel)]="name" required>
+<!-- <input type="text" [(ngModel)]="input" required>
 
-    <p>Value: {{ name }}</p>
+   {{ input }} -->
 
 
-    <button (click)="setValue()">Set value</button>
+
+
+   <!-- <select [(ngModel)]="select"]  >
+    <ng-container *ngFor="let name of names">
+          <option [ngValue]="name" >{{ name }}</option>
+    </ng-container>
+
+   </select>
+   {{ select }} -->
+
+
+   <!-- <input type="checkbox" [(ngModel)]="show" >
+<ng-template  [ngIf]="show">
+  <div>
+    Wellcome 17 angular
+  </div>
+</ng-template>
+
+<div *ngIf="show">
+  Wellcome 16 angular
+</div> -->
+
+<form #myForm="ngForm" (ngSubmit)="getData()">
+  <input type="text" name="name"   [(ngModel)]="name">
+  <button type="submit" >sendvalue</button>
+</form>
+
+
+

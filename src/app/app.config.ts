@@ -7,5 +7,8 @@ import { FormsModule } from '@angular/forms';
 
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideRouter(routes), provideClientHydration(),FormsModule]
+  providers: [provideRouter(routes),
+     provideClientHydration(),
+     FormsModule
+    ]
 };
