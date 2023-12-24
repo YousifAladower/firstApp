@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HousingLocationComponent } from '../housing-location/housing-location.component';
 import { HousingLocation } from '../housinglocation';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
-import { FormControl } from '@angular/forms';
+import { FormControl,FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -27,17 +27,27 @@ export class MainComponent implements OnInit{
   // show=true;
   // input="Angular framwork";
   // select="";
-  firstName=new FormControl('');
+  myModel=new FormGroup({
+    firstName:new FormControl(''),
+    lastName:new FormControl('')
+  })
+
 constructor(){
-  this.firstName.setValue("yousif");
+
 }
   name: any;
   ngOnInit(): void {
 
   }
-  setDATA(){
-    this.firstName.setValue(this.firstName.value);
+  update()
+  {
+    this.myModel.patchValue({
+      firstName:"YOUSIF",
+      lastName:"ALADOWER"
+    })
   }
+
+
 
   // setValue() {
   //   this.name = 'Nancy';

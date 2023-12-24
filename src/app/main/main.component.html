@@ -63,7 +63,17 @@
 </form> -->
 
 
-<label for="firstName" >FirstName</label>
-<input type="text" id="firstName" [formControl]="firstName"  onchange="setDATA()">
-<p>{{ firstName.value }}</p>
+<!-- <label for="firstName" >FirstName</label>
+<input type="text" id="firstName" [formControl]="firstName"  >
+<p>{{ firstName.value }}</p> -->
 
+
+<form [formGroup]="myModel">
+  <label for="firstName" >FirstName</label>
+  <input type="text"  id="firstName" formControlName="firstName">
+
+  <label for="lastname" >lastname</label>
+  <input type="text"  id="lastname" formControlName="lastname">
+ <button type="button" (click)="update()">update</button>
+</form>
+{{ myModel.value|json }}
